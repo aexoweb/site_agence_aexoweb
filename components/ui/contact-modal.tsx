@@ -213,6 +213,13 @@ export function ContactModal({ open, onClose }: ContactModalProps) {
                           {errorMsg}
                         </p>
                       )}
+                      <p className="text-[11px] text-white/25 text-center leading-relaxed">
+                        Les informations recueillies via ce formulaire sont utilisées par AexoWeb uniquement dans le but de traiter votre demande de devis. Pour en savoir plus sur la gestion de vos données et l&apos;exercice de vos droits, veuillez consulter notre{' '}
+                        <a href="/politique-de-confidentialite" className="underline underline-offset-2 hover:text-white/50 transition-colors" target="_blank" rel="noopener noreferrer">
+                          Politique de confidentialité
+                        </a>
+                        .
+                      </p>
                     </form>
                   </motion.div>
                 )}

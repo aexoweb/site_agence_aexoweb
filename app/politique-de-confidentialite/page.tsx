@@ -98,20 +98,29 @@ export default function PolitiqueConfidentialitePage() {
         {
           title: 'Durée de conservation',
           content: (
-            <div className="space-y-2">
-              {[
-                { type: 'Données de contact / prospects', duree: '3 ans à compter du dernier contact' },
-                { type: 'Données clients (contrats, factures)', duree: '10 ans (obligation comptable)' },
-                { type: 'Données de navigation / logs', duree: '12 mois maximum' },
-                { type: 'Cookies de consentement', duree: '6 mois' },
-                { type: 'Cookies fonctionnels (thème)', duree: '12 mois' },
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 py-3 border-b border-border last:border-0">
-                  <span className="text-foreground flex-1">{item.type}</span>
-                  <span className="text-muted-foreground/70 text-right shrink-0 text-xs">{item.duree}</span>
-                </div>
-              ))}
-            </div>
+            <>
+              <div className="space-y-2">
+                {[
+                  { type: 'Demande de devis sans suite (aucune réponse du client)', duree: '30 jours après le dernier contact' },
+                  { type: 'Données de contact / prospects engagés', duree: '3 ans à compter du dernier contact' },
+                  { type: 'Données clients (contrats, factures)', duree: '10 ans (obligation comptable)' },
+                  { type: 'Données de navigation / logs', duree: '12 mois maximum' },
+                  { type: 'Cookies de consentement', duree: '6 mois' },
+                  { type: 'Cookies fonctionnels (thème)', duree: '12 mois' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 py-3 border-b border-border last:border-0">
+                    <span className="text-foreground flex-1">{item.type}</span>
+                    <span className="text-muted-foreground/70 text-right shrink-0 text-xs">{item.duree}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Lorsqu'une demande de devis ne donne pas lieu à une suite commerciale (absence de réponse ou de
+                confirmation de la part du prospect), les données personnelles transmises via le formulaire de contact
+                sont <strong className="text-foreground">supprimées dans un délai de 30 jours</strong> à compter du
+                dernier échange.
+              </p>
+            </>
           ),
         },
         {

@@ -20,14 +20,14 @@ export default function MentionsLegalesPage() {
             <>
               <p>Le site <strong className="text-foreground">aexoweb.com</strong> est édité par :</p>
               <ul className="mt-3 space-y-1.5 list-none">
-                <li><span className="text-foreground/60">Raison sociale :</span> <strong className="text-foreground">Aexo</strong></li>
-                <li><span className="text-foreground/60">Forme juridique :</span> SASU (Société par Actions Simplifiée Unipersonnelle)</li>
-                <li><span className="text-foreground/60">Capital social :</span> 1 000 €</li>
-                <li><span className="text-foreground/60">Siège social :</span> Paris, France</li>
-                <li><span className="text-foreground/60">SIRET :</span> [À compléter]</li>
-                <li><span className="text-foreground/60">RCS :</span> Paris B [À compléter]</li>
-                <li><span className="text-foreground/60">N° TVA intracommunautaire :</span> FR[À compléter]</li>
-                <li><span className="text-foreground/60">Directeur de la publication :</span> [Nom du gérant]</li>
+                <li><span className="text-foreground/60">Raison sociale :</span> <strong className="text-foreground">Création en cours...</strong></li>
+                <li><span className="text-foreground/60">Forme juridique :</span> Création en cours...</li>
+                <li><span className="text-foreground/60">Capital social :</span> Création en cours...</li>
+                <li><span className="text-foreground/60">Siège social :</span> Création en cours...</li>
+                <li><span className="text-foreground/60">SIRET :</span> Création en cours...</li>
+                <li><span className="text-foreground/60">RCS :</span> Création en cours...</li>
+                <li><span className="text-foreground/60">N° TVA intracommunautaire :</span> Création en cours...</li>
+                <li><span className="text-foreground/60">Directeur de la publication :</span> Création en cours...</li>
                 <li>
                   <span className="text-foreground/60">Contact :</span>{' '}
                   <a href="mailto:contact@aexoweb.com" className="text-foreground underline underline-offset-2 hover:text-foreground/70 transition-colors">
@@ -44,12 +44,12 @@ export default function MentionsLegalesPage() {
             <>
               <p>Le site est hébergé par :</p>
               <ul className="mt-3 space-y-1.5 list-none">
-                <li><span className="text-foreground/60">Société :</span> <strong className="text-foreground">Vercel Inc.</strong></li>
-                <li><span className="text-foreground/60">Adresse :</span> 340 Pine Street, Suite 700, San Francisco, CA 94104, États-Unis</li>
+                <li><span className="text-foreground/60">Société :</span> <strong className="text-foreground">Hostinger.</strong></li>
+                {/* <li><span className="text-foreground/60">Adresse :</span> 340 Pine Street, Suite 700, San Francisco, CA 94104, États-Unis</li> */}
                 <li>
                   <span className="text-foreground/60">Site web :</span>{' '}
-                  <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2 hover:text-foreground/70 transition-colors">
-                    vercel.com
+                  <a href="https://hostinger.com" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2 hover:text-foreground/70 transition-colors">
+                    hostinger.com
                   </a>
                 </li>
               </ul>
