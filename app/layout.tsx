@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { CookieBanner } from "@/components/ui/cookie-banner";
 import { ChatWidget } from "@/components/ui/chat-widget";
 import { JsonLd } from "@/components/ui/json-ld";
 import "./globals.css";
@@ -93,7 +92,6 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
-        <CookieBanner />
         <ChatWidget />
       </body>
     </html>

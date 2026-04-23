@@ -23,10 +23,6 @@ const legalLinks = [
   { label: 'Politique de confidentialité', href: '/politique-de-confidentialite' },
 ];
 
-function openCookieBanner() {
-  window.dispatchEvent(new Event('open-cookie-banner'));
-}
-
 export function Footer() {
   return (
     <footer className="border-t border-border px-4 sm:px-6 pt-10 sm:pt-16 pb-8">
@@ -100,14 +96,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <button
-                  onClick={openCookieBanner}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 text-left"
-                >
-                  Gérer les cookies
-                </button>
-              </li>
             </ul>
           </div>
         </motion.div>

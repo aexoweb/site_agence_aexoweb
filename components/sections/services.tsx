@@ -9,9 +9,9 @@ const services = [
     number: '01',
     title: 'Création Web',
     description:
-      'Sites vitrines, landing pages et applications web conçus sur mesure pour convertir vos visiteurs en clients.',
-    example: 'Site vitrine pour un cabinet d\'avocats parisien',
-    result: '+3× de demandes de contact',
+      'Sites vitrines, landing pages conçus sur mesure pour convertir vos visiteurs en clients.',
+    example: 'Site vitrine moderne pour un cabinet d\'avocats parisien',
+    result: '3× de demandes de contact',
     resultColor: 'text-emerald-600 dark:text-emerald-400 bg-emerald-500/8 dark:bg-emerald-400/10',
   },
   {
@@ -29,8 +29,8 @@ const services = [
     number: '03',
     title: 'Intégration IA',
     description:
-      'Chatbots intelligents, automatisations avancées et fonctionnalités IA intégrées pour vous démarquer.',
-    example: 'Chatbot intelligent pour un e-commerce mode',
+      'En développement. Bientôt disponible..',
+    example: 'Chatbot intelligent',
     result: '−40 % de tickets support',
     resultColor: 'text-blue-600 dark:text-blue-400 bg-blue-500/8 dark:bg-blue-400/10',
   },
@@ -47,11 +47,11 @@ const services = [
   {
     icon: ShoppingBag,
     number: '05',
-    title: 'E-commerce',
+    title: 'Hébergement',
     description:
-      'Boutiques en ligne performantes avec tunnel d\'achat optimisé, paiement sécurisé et gestion simple.',
-    example: 'Boutique en ligne pour une marque de cosmétiques bio',
-    result: '+240 % de conversions',
+      'Hébergement web ultra-rapide optimisé pour les performances. Offrez à vos utilisateurs une navigation fluide grâce à des serveurs de dernière génération.',
+    example: 'Hébergement en ligne de site web',
+    result: '+ 99% de disponibilité',
     resultColor: 'text-rose-600 dark:text-rose-400 bg-rose-500/8 dark:bg-rose-400/10',
   },
   {
@@ -60,7 +60,7 @@ const services = [
     title: 'Support & Évolution',
     description:
       'Maintenance proactive, mises à jour régulières et accompagnement continu. Votre site évolue avec vous.',
-    example: 'Accompagnement d\'une startup SaaS sur 18 mois',
+    example: 'Accompagnement d\'une startup sur 18 mois',
     result: '0 interruption de service',
     resultColor: 'text-cyan-600 dark:text-cyan-400 bg-cyan-500/8 dark:bg-cyan-400/10',
   },
@@ -128,7 +128,7 @@ export function ServicesSection() {
                 {/* Concrete example */}
                 <div className="mt-6 pt-5 border-t border-border space-y-2">
                   <p className="text-[11px] font-medium text-muted-foreground/50 uppercase tracking-widest">
-                    Exemple concret
+                    Exemples concret
                   </p>
                   <p className="text-sm text-foreground/70 leading-snug">{service.example}</p>
                   <span
