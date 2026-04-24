@@ -37,7 +37,7 @@ const itemVariants = {
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative overflow-hidden py-16 md:py-28 lg:py-36 px-4 sm:px-6">
+    <section id="about" className="relative overflow-hidden py-10 md:py-14 px-4 sm:px-6 h-full">
 
       {/* ── Background ── */}
       <div className="absolute inset-0 pointer-events-none">

@@ -72,9 +72,20 @@ export default function Home() {
     if (!container) return;
 
     const handleWheel = (e: WheelEvent) => {
+      const sections = Array.from(container.querySelectorAll<HTMLElement>('.snap-section'));
+      const current = sections[currentIndexRef.current];
+      if (!current) return;
+
+      const direction = e.deltaY > 0 ? 1 : -1;
+      const atBottom = current.scrollTop + current.clientHeight >= current.scrollHeight - 2;
+      const atTop = current.scrollTop <= 2;
+
+      // Laisser défiler à l'intérieur de la section si pas en bout de course
+      if (direction > 0 && !atBottom) return;
+      if (direction < 0 && !atTop) return;
+
       e.preventDefault();
       if (isAnimatingRef.current) return;
-      const direction = e.deltaY > 0 ? 1 : -1;
       scrollToSection(currentIndexRef.current + direction);
     };
 
@@ -87,6 +98,15 @@ export default function Home() {
       const delta = touchStartYRef.current - e.changedTouches[0].clientY;
       if (Math.abs(delta) < 40) return;
       const direction = delta > 0 ? 1 : -1;
+
+      const sections = Array.from(container.querySelectorAll<HTMLElement>('.snap-section'));
+      const current = sections[currentIndexRef.current];
+      if (!current) return;
+      const atBottom = current.scrollTop + current.clientHeight >= current.scrollHeight - 2;
+      const atTop = current.scrollTop <= 2;
+      if (direction > 0 && !atBottom) return;
+      if (direction < 0 && !atTop) return;
+
       scrollToSection(currentIndexRef.current + direction);
     };
 

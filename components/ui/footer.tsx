@@ -25,7 +25,7 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-border px-4 sm:px-6 pt-10 sm:pt-16 pb-8">
+    <footer className="relative overflow-hidden border-t border-border px-4 sm:px-6 pt-10 pb-8 h-full flex flex-col justify-center">
       {/* ── Background ── */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Dot grid */}
