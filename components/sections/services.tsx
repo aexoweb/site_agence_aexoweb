@@ -78,7 +78,7 @@ const itemVariants = {
 
 export function ServicesSection() {
   return (
-    <section id="services" className="relative overflow-hidden pt-20 md:pt-22 pb-10 md:pb-12 px-4 sm:px-6 h-full">
+    <section id="services" className="relative overflow-hidden pt-20 md:pt-22 pb-10 md:pb-12 px-4 sm:px-6 h-full flex flex-col justify-center">
 
       {/* ── Background ── */}
       <div className="absolute inset-0 pointer-events-none">
