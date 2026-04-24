@@ -117,7 +117,7 @@ export function ServicesSection() {
           <p className="text-xs font-medium text-muted-foreground/60 uppercase tracking-[0.2em] mb-4">
             Services
           </p>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight max-w-xl">
+          <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight max-w-xl">
             Tout ce qu&apos;il faut pour{' '}
             <span className="text-muted-foreground">briller en ligne.</span>
           </h2>
@@ -136,7 +136,7 @@ export function ServicesSection() {
               <motion.div
                 key={service.number}
                 variants={itemVariants}
-                className="group relative flex flex-col p-5 sm:p-6 md:p-8 bg-background hover:bg-muted/40 transition-colors duration-300 cursor-default"
+                className="group relative flex flex-col p-4 sm:p-6 md:p-8 bg-background hover:bg-muted/40 transition-colors duration-300 cursor-default"
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -153,7 +153,7 @@ export function ServicesSection() {
                 </p>
 
                 {/* Concrete example */}
-                <div className="mt-6 pt-5 border-t border-border space-y-2">
+                <div className="hidden sm:block mt-6 pt-5 border-t border-border space-y-2">
                   <p className="text-[11px] font-medium text-muted-foreground/50 uppercase tracking-widest">
                     Exemples concret
                   </p>

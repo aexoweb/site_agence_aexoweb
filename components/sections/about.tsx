@@ -78,7 +78,7 @@ export function AboutSection() {
           À propos
         </motion.p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 lg:gap-24">
           {/* Left */}
           <div>
             <motion.h2
@@ -86,7 +86,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight leading-[1.15] mb-6 sm:mb-8"
+              className="text-xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight leading-[1.15] mb-4 sm:mb-8"
             >
               Une agence pensée{' '}
               <span className="text-muted-foreground">pour l&apos;ère digitale.</span>

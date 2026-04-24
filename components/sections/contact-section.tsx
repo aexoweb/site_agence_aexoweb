@@ -73,7 +73,7 @@ export function ContactSection({ onOpenContact }: ContactSectionProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-          className="text-2xl sm:text-4xl md:text-6xl font-bold text-foreground tracking-tight leading-[1.1] mb-6"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground tracking-tight leading-[1.1] mb-6"
         >
           Une idée en tête ?
           <br />

@@ -133,8 +133,8 @@ const FloatingIconsHero = React.forwardRef<
         />
       </div>
 
-      {/* Floating icons layer */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* Floating icons layer — masqué sur mobile */}
+      <div className="absolute inset-0 w-full h-full hidden md:block">
         {icons.map((iconData, index) => (
           <Icon key={iconData.id} mouseX={mouseX} mouseY={mouseY} iconData={iconData} index={index} />
         ))}
@@ -147,7 +147,7 @@ const FloatingIconsHero = React.forwardRef<
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-b from-gray-900 via-gray-800 to-gray-500 dark:from-white dark:via-white dark:to-violet-200/60 text-transparent bg-clip-text leading-[1.1] pb-2">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight bg-gradient-to-b from-gray-900 via-gray-800 to-gray-500 dark:from-white dark:via-white dark:to-violet-200/60 text-transparent bg-clip-text leading-[1.1] pb-2">
             {title}
           </h1>
         </motion.div>
@@ -156,7 +156,7 @@ const FloatingIconsHero = React.forwardRef<
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 max-w-lg mx-auto text-base md:text-lg text-muted-foreground leading-relaxed"
+          className="mt-4 sm:mt-6 max-w-lg mx-auto text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed"
         >
           {subtitle}
         </motion.p>

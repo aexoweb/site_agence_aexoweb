@@ -143,7 +143,7 @@ export function PortfolioSection() {
             <p className="text-xs font-medium text-muted-foreground/60 uppercase tracking-[0.2em] mb-4">
               Réalisations
             </p>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight">
+            <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight">
               Ce qu&apos;on a{' '}
               <span className="text-muted-foreground">construit.</span>
             </h2>
@@ -168,7 +168,7 @@ export function PortfolioSection() {
               className="group flex flex-col rounded-2xl overflow-hidden border border-border bg-card hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/30 hover:-translate-y-1 transition-all duration-500 cursor-pointer"
             >
               {/* Image */}
-              <div className="relative h-44 sm:h-52 overflow-hidden bg-muted">
+              <div className="relative h-36 sm:h-44 md:h-52 overflow-hidden bg-muted">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
@@ -187,7 +187,7 @@ export function PortfolioSection() {
               </div>
 
               {/* Content */}
-              <div className="flex flex-col flex-1 p-4 sm:p-6">
+              <div className="flex flex-col flex-1 p-3 sm:p-4 md:p-6">
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <div>
                     <h3 className="text-base font-bold text-foreground leading-tight">
