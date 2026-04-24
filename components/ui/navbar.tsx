@@ -15,13 +15,16 @@ const navLinks = [
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
   return (
     <button
       onClick={toggleTheme}
       aria-label="Changer le thème"
       className="p-2 rounded-lg text-foreground/40 hover:text-foreground hover:bg-foreground/5 transition-colors duration-200"
+      suppressHydrationWarning
     >
-      {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+      {mounted ? (theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />) : <span className="block w-4 h-4" />}
     </button>
   );
 }

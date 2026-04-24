@@ -97,7 +97,7 @@ const itemVariants = {
 
 export function PortfolioSection() {
   return (
-    <section id="portfolio" className="relative overflow-hidden py-10 md:py-14 px-4 sm:px-6 bg-muted/20 h-full">
+    <section id="portfolio" className="relative overflow-hidden pt-20 md:pt-22 pb-10 md:pb-12 px-4 sm:px-6 bg-muted/20 h-full">
 
       {/* ── Background ── */}
       <div className="absolute inset-0 pointer-events-none">

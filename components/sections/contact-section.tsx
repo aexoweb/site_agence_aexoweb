@@ -11,7 +11,7 @@ export function ContactSection({ onOpenContact }: ContactSectionProps) {
   return (
     <section
       id="contact"
-      className="py-10 md:py-14 px-4 sm:px-6 relative overflow-hidden bg-muted/20 h-full flex flex-col justify-center"
+      className="pt-20 md:pt-16 pb-10 px-4 sm:px-6 relative overflow-hidden bg-muted/20 h-full flex flex-col justify-center"
     >
       {/* ── Background ── */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center">

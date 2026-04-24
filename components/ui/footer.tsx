@@ -117,7 +117,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground/50">
-            © {new Date().getFullYear()} Aexo. Tous droits réservés.
+            © <span suppressHydrationWarning>{new Date().getFullYear()}</span> Aexo. Tous droits réservés.
           </p>
           <p className="text-xs text-muted-foreground/30">
             Conçu & développé avec ♥ à Paris

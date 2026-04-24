@@ -65,7 +65,7 @@ export function LegalLayout({ title, subtitle, updatedAt, sections }: LegalLayou
       {/* Footer */}
       <footer className="border-t border-border px-6 py-8">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/50">
-          <p>© {new Date().getFullYear()} Aexo. Tous droits réservés.</p>
+          <p>© <span suppressHydrationWarning>{new Date().getFullYear()}</span> Aexo. Tous droits réservés.</p>
           <div className="flex gap-6">
             <Link href="/mentions-legales" className="hover:text-foreground transition-colors">
               Mentions légales

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ChatWidget } from "@/components/ui/chat-widget";
+import { ChatWidgetClient } from "@/components/ui/chat-widget-client";
 import { JsonLd } from "@/components/ui/json-ld";
 import "./globals.css";
 
@@ -92,7 +92,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
-        <ChatWidget />
+        <ChatWidgetClient />
       </body>
     </html>
   );
