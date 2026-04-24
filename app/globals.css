@@ -70,4 +70,9 @@
     @apply bg-background text-foreground;
     overflow-x: hidden;
   }
+  .snap-container {
+    height: 100svh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 }

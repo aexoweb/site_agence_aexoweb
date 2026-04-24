@@ -25,8 +25,22 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border px-4 sm:px-6 pt-10 sm:pt-16 pb-8">
-      <div className="max-w-7xl mx-auto">
+    <footer className="relative overflow-hidden border-t border-border px-4 sm:px-6 pt-10 sm:pt-16 pb-8">
+      {/* ── Background ── */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+          style={{
+            backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
+            backgroundSize: '28px 28px',
+          }}
+        />
+        {/* Subtle top-center glow */}
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[500px] h-40 rounded-full bg-foreground/[0.03] blur-2xl" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

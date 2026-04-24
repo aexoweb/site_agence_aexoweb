@@ -12,8 +12,6 @@ interface ContactModalProps {
 
 const projectTypes = [
   'Site vitrine',
-  'E-commerce',
-  'Application web',
   'Refonte graphique',
   'Intégration IA',
   'Autre',

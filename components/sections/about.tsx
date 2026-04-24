@@ -37,8 +37,37 @@ const itemVariants = {
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-16 md:py-28 lg:py-36 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="relative overflow-hidden py-16 md:py-28 lg:py-36 px-4 sm:px-6">
+
+      {/* ── Background ── */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Emerald blob — top right */}
+        <motion.div
+          animate={{ scale: [1, 1.09, 1], opacity: [0.4, 0.65, 0.4] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full bg-emerald-500/18 dark:bg-emerald-500/28 blur-3xl"
+        />
+        {/* Violet blob — bottom left */}
+        <motion.div
+          animate={{ scale: [1, 1.06, 1], opacity: [0.3, 0.55, 0.3] }}
+          transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
+          className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-violet-500/15 dark:bg-violet-500/25 blur-3xl"
+        />
+        {/* Concentric rings — right side */}
+        <svg className="absolute right-0 top-1/2 -translate-y-1/2 w-80 h-80 opacity-[0.12] dark:opacity-[0.18]" viewBox="0 0 320 320" fill="none">
+          {[40, 80, 120, 160, 200, 240].map((r) => (
+            <circle key={r} cx="320" cy="160" r={r} stroke="currentColor" strokeWidth="0.7" />
+          ))}
+        </svg>
+        {/* Horizontal lines — left accent */}
+        <svg className="absolute left-0 top-1/2 -translate-y-1/2 w-48 h-64 opacity-[0.1] dark:opacity-[0.15]" viewBox="0 0 192 256" fill="none">
+          {Array.from({ length: 14 }).map((_, i) => (
+            <line key={i} x1="0" y1={i * 20} x2="192" y2={i * 20} stroke="currentColor" strokeWidth="0.6" />
+          ))}
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

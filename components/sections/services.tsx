@@ -78,8 +78,35 @@ const itemVariants = {
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-16 md:py-28 lg:py-36 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="services" className="relative overflow-hidden py-16 md:py-28 lg:py-36 px-4 sm:px-6">
+
+      {/* ── Background ── */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.09] dark:opacity-[0.14]"
+          style={{
+            backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
+        {/* Violet blob — top right */}
+        <motion.div
+          animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.8, 0.5] }}
+          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-violet-500/20 dark:bg-violet-500/35 blur-3xl"
+        />
+        {/* Indigo blob — bottom left */}
+        <motion.div
+          animate={{ scale: [1, 1.06, 1], opacity: [0.4, 0.7, 0.4] }}
+          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-indigo-500/15 dark:bg-indigo-500/28 blur-3xl"
+        />
+        {/* Horizontal rule accent */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-foreground/10 to-transparent" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -146,3 +173,4 @@ export function ServicesSection() {
     </section>
   );
 }
+

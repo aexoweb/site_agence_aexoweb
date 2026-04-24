@@ -13,9 +13,48 @@ export function ContactSection({ onOpenContact }: ContactSectionProps) {
       id="contact"
       className="py-16 md:py-28 lg:py-36 px-4 sm:px-6 relative overflow-hidden bg-muted/20"
     >
-      {/* Background glow */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-full max-w-[600px] h-[300px] sm:h-[400px] rounded-full bg-foreground/[0.03] blur-3xl" />
+      {/* ── Background ── */}
+      <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
+        {/* Central glow */}
+        <motion.div
+          animate={{ scale: [1, 1.12, 1], opacity: [0.5, 0.9, 0.5] }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute w-full max-w-[700px] h-[350px] rounded-full bg-violet-500/18 dark:bg-violet-500/30 blur-3xl"
+        />
+        {/* Amber accent */}
+        <motion.div
+          animate={{ scale: [1, 1.08, 1], opacity: [0.3, 0.55, 0.3] }}
+          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          className="absolute left-1/4 w-72 h-72 rounded-full bg-amber-500/14 dark:bg-amber-500/22 blur-3xl"
+        />
+        {/* Animated concentric rings */}
+        <svg className="absolute w-[600px] h-[600px] opacity-[0.12] dark:opacity-[0.18]" viewBox="0 0 600 600" fill="none">
+          {[60, 110, 165, 225, 290].map((r, i) => (
+            <motion.circle
+              key={r}
+              cx="300" cy="300" r={r}
+              stroke="currentColor" strokeWidth="0.7"
+              animate={{ opacity: [0.3, 0.8, 0.3] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 }}
+            />
+          ))}
+        </svg>
+        {/* Corner dots — top left */}
+        <svg className="absolute top-0 left-0 w-40 h-40 opacity-[0.12] dark:opacity-[0.18]" viewBox="0 0 160 160" fill="none">
+          {Array.from({ length: 5 }).map((_, row) =>
+            Array.from({ length: 5 }).map((_, col) => (
+              <circle key={`${row}-${col}`} cx={col * 32 + 8} cy={row * 32 + 8} r="1.5" fill="currentColor" />
+            ))
+          )}
+        </svg>
+        {/* Corner dots — bottom right */}
+        <svg className="absolute bottom-0 right-0 w-40 h-40 opacity-[0.12] dark:opacity-[0.18]" viewBox="0 0 160 160" fill="none">
+          {Array.from({ length: 5 }).map((_, row) =>
+            Array.from({ length: 5 }).map((_, col) => (
+              <circle key={`${row}-${col}`} cx={col * 32 + 8} cy={row * 32 + 8} r="1.5" fill="currentColor" />
+            ))
+          )}
+        </svg>
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10 text-center">

@@ -97,8 +97,40 @@ const itemVariants = {
 
 export function PortfolioSection() {
   return (
-    <section id="portfolio" className="py-16 md:py-28 lg:py-36 px-4 sm:px-6 bg-muted/20">
-      <div className="max-w-7xl mx-auto">
+    <section id="portfolio" className="relative overflow-hidden py-16 md:py-28 lg:py-36 px-4 sm:px-6 bg-muted/20">
+
+      {/* ── Background ── */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Diagonal stripe pattern */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.07] dark:opacity-[0.11]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="diag-port" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="48" stroke="currentColor" strokeWidth="0.8" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#diag-port)" />
+        </svg>
+        {/* Cyan blob — top left */}
+        <motion.div
+          animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.7, 0.4] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-48 -left-48 w-[600px] h-[600px] rounded-full bg-cyan-500/18 dark:bg-cyan-500/28 blur-3xl"
+        />
+        {/* Rose blob — bottom right */}
+        <motion.div
+          animate={{ scale: [1, 1.07, 1], opacity: [0.35, 0.6, 0.35] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+          className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full bg-rose-500/15 dark:bg-rose-500/25 blur-3xl"
+        />
+        {/* Corner accent — top right */}
+        <svg className="absolute top-0 right-0 w-48 h-48 opacity-[0.13] dark:opacity-[0.2]" viewBox="0 0 200 200" fill="none">
+          {[20, 50, 80, 110, 140].map((r) => (
+            <circle key={r} cx="200" cy="0" r={r} stroke="currentColor" strokeWidth="0.6" />
+          ))}
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}

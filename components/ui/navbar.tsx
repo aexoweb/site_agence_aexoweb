@@ -35,9 +35,11 @@ export function Navbar({ onOpenContact }: NavbarProps) {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   React.useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const main = document.getElementById('scroll-main');
+    if (!main) return;
+    const handleScroll = () => setScrolled(main.scrollTop > 20);
+    main.addEventListener('scroll', handleScroll);
+    return () => main.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (

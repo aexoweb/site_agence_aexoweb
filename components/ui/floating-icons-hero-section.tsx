@@ -76,7 +76,7 @@ const Icon = ({
         className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 p-3 rounded-3xl shadow-xl bg-card/80 backdrop-blur-md border border-border/20"
         animate={{ y: [0, -8, 0, 8, 0], x: [0, 6, 0, -6, 0], rotate: [0, 5, 0, -5, 0] }}
         transition={{
-          duration: 5 + Math.random() * 5,
+          duration: 5 + (index % 5),
           repeat: Infinity,
           repeatType: 'mirror',
           ease: 'easeInOut',
